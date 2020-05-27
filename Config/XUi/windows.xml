@@ -1,0 +1,609 @@
+<ProjectZ2>
+
+				<!--sprite name="alignment" depth="99" pos="0,0" size="1,50000" sprite="menu_empty" color="[alignmenthelper]" pivot="center" /-->
+				<!--sprite name="alignment" depth="99" pos="0,0" size="50000,1" sprite="menu_empty" color="[alignmenthelper]" pivot="center" /-->
+
+<!--	// Z2 // Compass -->
+
+		<remove xpath="/windows/window[@name='windowCompass']" />
+
+		<append xpath="/windows">
+			<window name="windowCompass" depth="1" pos="-150,-9" size="300,43" controller="CompassWindow">
+				<sprite name="compassRightA" depth="3" pos="315,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="compassRightB" depth="2" pos="315,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="compassRightC" depth="2" pos="315,-33" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="compassRightD" depth="3" pos="315,-33" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right"/>
+
+				<sprite name="compassIndicatorDiamondA1" depth="4" pos="150,1" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="compassIndicatorDiamondA2" depth="5" pos="150,1" size="10,10" sprite="menu_empty3px" color="[compassIndicator]" rotation="45" pivot="center" />
+
+				<sprite name="compassBackground" depth="2" pos="0,-5" size="300,23" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" />
+				<texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@https://i.imgur.com/ArNiBMX.png" color="[iconColor]" tooltip="CHARACTER" rect_size="0.25,1" rect_offset=".8,0" />
+
+				<sprite name="compassLeftA" depth="3" pos="-16,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="compassLeftB" depth="2" pos="-16,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="compassLeftC" depth="2" pos="-16,-33" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="compassLeftD" depth="3" pos="-16,-33" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="compassLeftDiamondA1" depth="4" pos="-16,-16" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="compassLeftDiamondA2" depth="5" pos="-16,-16" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="compassToTimeLine" depth="1" pos="-10,-16" size="525,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="dayLineRightA" depth="3" pos="-530,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="dayLineRightB" depth="2" pos="-530,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="dayLineRightC" depth="2" pos="-530,-33" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="dayLineRightD" depth="3" pos="-530,-33" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="dayLineRightDiamondA1" depth="4" pos="-530,-16" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="dayLineRightDiamondA2" depth="5" pos="-530,-16" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="dayLineBackground" depth="2" pos="-595,-16" size="100,23" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" pivot="center" />
+				<label name="dayLineContent" depth="8" pos="-595,-16" size="100,23" text="{daytitle}:  [{daycolor|always}]{day|always}[-]" color="[hudLabelPrimary]" font_size="18" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" />
+
+				<sprite name="dayLineLeftA" depth="3" pos="-659,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="dayLineLeftB" depth="2" pos="-659,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="dayLineLeftC" depth="2" pos="-659,-33" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="dayLineLeftD" depth="3" pos="-659,-33" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="timeLineRightDiamondA1" depth="4" pos="-480,-16" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="timeLineRightDiamondA2" depth="5" pos="-480,-16" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="timeLineTopA" depth="2" pos="-480,-20" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="timeLineTopB" depth="3" pos="-480,-50" size="23,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" rotation="45" />
+				<sprite name="timeLineTopC" depth="3" pos="-526,-66" size="30,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="timeLineRightA" depth="3" pos="-530,-50" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="timeLineRightB" depth="2" pos="-530,-50" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="timeLineRightC" depth="2" pos="-530,-83" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="timeLineRightD" depth="3" pos="-530,-83" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="timeLineRightDiamondA1" depth="4" pos="-530,-66" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="timeLineRightDiamondA2" depth="5" pos="-530,-66" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="timeLineBackground" depth="2" pos="-595,-66" size="100,23" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" pivot="center" />
+				<label name="timeLineContent" depth="8" pos="-595,-66" size="100,23" text="{time|always}" color="[hudLabelPrimary]" font_size="18" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" />
+
+				<sprite name="timeLineLeftA" depth="3" pos="-659,-50" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="timeLineLeftB" depth="2" pos="-659,-50" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="timeLineLeftC" depth="2" pos="-659,-83" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="timeLineLeftD" depth="3" pos="-659,-83" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+			</window>
+		</append>
+
+
+<!--	// Z2 // Unit Frames -->
+
+		<remove xpath="/windows/window[@name='HUDLeftStatBars']" />
+
+		<append xpath="/windows">
+			<window name="HUDLeftStatBars" depth="3">
+				<sprite name="timeLineLeftDiamondA1" depth="4" pos="112,1011" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="timeLineLeftDiamondA2" depth="5" pos="112,1011" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="timeLineToStatsA" depth="1" pos="105,1011" size="74,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="timeLineToStatsB" depth="2" pos="25,1005" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="45" />
+				<sprite name="timeLineToStatsC" depth="1" pos="25,50" size="1,956" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="timeLineToStatsD" depth="2" pos="25,50" size="85,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<rect name="hud" pos="100,98" controller="BuffPopoutList" side="left">
+					<panel name="item" pos="0,0" width="52" height="52" disableautobackground="true" visible="false">
+						<sprite name="border" depth="3" size="32,32" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="Background" depth="4" size="30,30" sprite="menu_empty2px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="Foreground" depth="5" size="23,23" sprite="menu_empty2px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+						<sprite name="Icon" depth="6" pos="0,0" size="20,20" color="[transparent]" pivot="center" />
+						<label name="TextContent" depth="7" pos="-18,-18" size="62,20" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
+					</panel>
+				</rect>
+
+				<sprite name="statXPDiamondA1" depth="3" pos="145,50" size="52,52" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+				<sprite name="statXPDiamondA2" depth="4" pos="145,50" size="50,50" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+				<sprite name="statXPDiamondA3" depth="2" pos="145,50" size="50,50" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+
+				<label name="statXPLevelTXT" depth="9" pos="145,50" size="52,52" text="{playerlevel}" color="[white]" font_size="30" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" controller="PlayerStatsWindow" />
+
+				<sprite name="statXPLevelBAR" depth="5" pos="145,50" size="43,43" sprite="menu_empty3px" color="{xpcolor}" standard_xp_color="[experienceBarMain]" updating_xp_color="[experienceBarGain]" deficit_xp_color="[experienceBarLoss]" xp_fill_speed="2.5" type="filled" fill="{xp}" rotation="45" filldirection="radial360" pivot="center" controller="ToolbeltWindow" />
+
+				<sprite name="statXPToHealthA" depth="1" pos="180,50" size="97,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="statHealthLeftA" depth="3" pos="273,86" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="statHealthLeftB" depth="2" pos="273,86" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="statHealthLeftC" depth="2" pos="273,14" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="statHealthLeftD" depth="3" pos="273,14" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="statHealthLeftDiamondA1" depth="4" pos="273,50" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="statHealthLeftDiamondA2" depth="5" pos="273,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<rect name="hud" pos="320,50" rows="1" cols="3" width="82" side="left">
+					<rect width="62" height="62" pos="0,0" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+						<sprite name="border" depth="3" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" pivot="center" fillcenter="false" />
+						<sprite name="background" depth="4" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" pivot="center" fillcenter="false" />
+
+						<sprite name="background" depth="5" size="53,53" sprite="menu_empty3px" color="[hudElementBG]" type="filled" fill="{statmodifiedmax}" filldirection="vertical" pivot="center" />
+						<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerHealthBar]" type="filled" fill="0" filldirection="vertical" pivot="center" />
+
+						<sprite name="Icon" depth="8" size="20,20" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
+						<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{statcurrentwithmax}" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" />
+					</rect>
+
+					<rect width="62" height="62" pos="-220,45" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+						<sprite name="healthToStealthA" depth="2" pos="170,-41" size="18,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" rotation="-45" />
+						<sprite name="healthToStealthB" depth="3" pos="157,-28" size="1,16" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+						<sprite name="healthToStealthC" depth="4" pos="157,-12" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" rotation="-45" />
+						<sprite name="healthToStealthD" depth="5" pos="151,-6" size="55,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+						<sprite name="healthToStealthE" depth="6" pos="96,-6" size="10,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" rotation="-45" />
+						<sprite name="healthToStealthF" depth="7" pos="90,1" size="61,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+						<sprite name="border" depth="3" size="42,42" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="background" depth="4" size="40,40" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+
+						<sprite name="background" depth="5" size="33,33" sprite="menu_empty3px" color="[hudElementBG]" type="filled" fill="{statmodifiedmax}" filldirection="radial360" rotation="45" pivot="center" />
+						<sprite name="BarContent" depth="6" size="33,33" sprite="menu_empty3px" color="{stealthcolor}" type="filled" fill="0" filldirection="radial360" rotation="45" pivot="center" />
+
+						<sprite name="Icon" depth="8" size="20,20" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
+						<label name="TextContent" depth="7" pos="21,21" size="62,20" text="{statcurrent}" color="[hudLabelPrimary]" font_size="14" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
+					</rect>
+
+					<rect width="62" height="62" pos="90,0" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+						<sprite name="border" depth="3" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" pivot="center" fillcenter="false" />
+						<sprite name="background" depth="4" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" pivot="center" fillcenter="false" />
+
+						<sprite name="background" depth="5" size="53,53" sprite="menu_empty3px" color="[hudElementBG]" type="filled" fill="{statmodifiedmax}" filldirection="vertical" pivot="center" />
+						<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerStaminaBar]" type="filled" fill="0" filldirection="vertical" pivot="center" />
+
+						<sprite name="Icon" depth="8" size="20,20" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
+						<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{statcurrentwithmax}" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" />
+					</rect>
+				</rect>
+
+				<sprite name="statStaminaRightA" depth="3" pos="457,86" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="statStaminaRightB" depth="2" pos="457,86" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="statStaminaRightC" depth="2" pos="457,14" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="statStaminaRightD" depth="3" pos="457,14" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="statStaminaRightDiamondA1" depth="4" pos="457,50" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="statStaminaRightDiamondA2" depth="5" pos="457,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="statStaminaToToolbeltA" depth="1" pos="464,50" size="80,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+<!-- TOOLBELT - COMES BETWEEN HERE -->
+
+				<sprite name="toolbeltToStatHungerA" depth="1" pos="1376,50" size="80,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="statFoodLeftA" depth="3" pos="1383,86" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="statFoodLeftB" depth="2" pos="1383,86" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="statFoodLeftC" depth="2" pos="1383,14" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="statFoodLeftD" depth="3" pos="1383,14" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="statFoodLeftDiamondA1" depth="4" pos="1383,50" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="statFoodLeftDiamondA2" depth="5" pos="1383,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<rect name="wellness" pos="1430,50" rows="1" cols="2" width="82" side="right">
+					<rect width="62" height="62" pos="0,0" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+						<sprite name="border" depth="3" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" pivot="center" fillcenter="false" />
+						<sprite name="background" depth="4" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" pivot="center" fillcenter="false" />
+
+						<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerHungerBar]" type="filled" fill="{statmodifiedmax}" filldirection="vertical" pivot="center" />
+
+						<sprite name="Icon" depth="7" size="20,20" sprite="ui_game_symbol_fork" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" rotation="45" />
+						<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{playerfood}" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" controller="PlayerStatsWindow" />
+					</rect>
+
+					<rect width="62" height="62" pos="90,0" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+						<sprite name="border" depth="3" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" pivot="center" fillcenter="false" />
+						<sprite name="background" depth="4" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" pivot="center" fillcenter="false" />
+
+						<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerThirstBar]" type="filled" fill="2" filldirection="vertical" pivot="center" />
+
+						<sprite name="Icon" depth="7" size="20,20" sprite="ui_game_symbol_water" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
+						<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{playerwater}" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" controller="PlayerStatsWindow" />
+					</rect>
+				</rect>
+
+				<sprite name="statWaterRightA" depth="3" pos="1567,86" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="statWaterRightB" depth="2" pos="1567,86" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="statWaterRightC" depth="2" pos="1567,14" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="statWaterRightD" depth="3" pos="1567,14" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="statWaterRightDiamondA1" depth="4" pos="1567,50" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="statWaterRightDiamondA2" depth="5" pos="1567,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="waterToLootA" depth="1" pos="1567,50" size="30,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="-45" />
+				<sprite name="waterToLootB" depth="2" pos="1588,29" size="1,16" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="waterToLootC" depth="3" pos="1588,13" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="-45" />
+				<sprite name="waterToLootD" depth="2" pos="1593,7" size="220,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="waterToLootE" depth="3" pos="1812,7" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="45" />
+				<sprite name="waterToLootF" depth="2" pos="1819,13" size="1,920" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+
+				<sprite name="questTrackerDiamondA1" depth="3" pos="1819,930" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="questTrackerDiamondA2" depth="4" pos="1819,930" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+			</window>
+		</append>
+
+
+<!--	// Z2 // Toolbelt -->
+
+		<remove xpath="/windows/window[@name='windowToolbelt']" />
+
+		<append xpath="/windows">
+			<window name="windowToolbelt" depth="5" pos="0,50" size="720,75" anchor="CenterBottom" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true">
+				<sprite name="statStaminaToToolbeltB" depth="1" pos="-377,0" size="80,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="toolbeltLeftA" depth="3" pos="-370,49" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="toolbeltLeftB" depth="2" pos="-370,0" size="1,99" sprite="menu_empty3px" color="[mainLineColor]" pivot="center" />
+				<sprite name="toolbeltLeftC" depth="3" pos="-370,-49" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="toolbeltLeftDiamondA1" depth="4" pos="-370,0" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="toolbeltLeftDiamondA2" depth="5" pos="-370,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="toolbeltRightDiamondA1" depth="4" pos="370,0" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="toolbeltRightDiamondA2" depth="5" pos="370,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="toolbeltRightA" depth="3" pos="370,49" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="toolbeltRightB" depth="2" pos="370,0" size="1,99" sprite="menu_empty3px" color="[mainLineColor]" pivot="center" />
+				<sprite name="toolbeltRightC" depth="3" pos="370,-49" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="toolbeltToStatHungerB" depth="1" pos="377,0" size="80,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<grid name="inventory" depth="1" pos="0,0" rows="1" cols="8" cell_width="90" cell_height="75" controller="Toolbelt" repeat_content="true" pivot="center">
+					<Z2_item_stack name="0" />
+				</grid>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Item Frames -->
+
+		<remove xpath="/windows/window[@name='HUDRightStatBars']" />
+
+		<append xpath="/windows">
+			<window name="HUDRightStatBars" depth="4">
+				<rect name="hud" pos="-200,90" controller="CollectedItemList" side="right">
+
+					<sprite name="lootItemLeftDiamondA1" depth="3" pos="177,30" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="lootItemLeftDiamondA2" depth="4" pos="177,30" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+					<panel name="item" depth="3" pos="70,0" size="62,62" disableautobackground="true" pivot="right" visible="false">
+						<sprite name="activeItemLeftDiamondA1" depth="3" pos="177,0" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+						<sprite name="activeItemLeftDiamondA2" depth="4" pos="177,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+						<sprite name="lootItemToDiamond" depth="1" pos="177,0" size="20,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+						<sprite name="border" depth="3" pos="130,0" size="42,42" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="Background" depth="4" pos="130,0" size="40,40" sprite="menu_empty2px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="Foreground" depth="5" pos="130,0" size="33,33" sprite="menu_empty2px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+
+						<sprite name="Icon" depth="6" pos="130,0" size="30,30" atlas="ItemIconAtlas" color="[transparent]" foregroundlayer="true" pivot="center" />
+
+						<label name="TextContent" depth="7" pos="110,-18" size="42,20" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
+
+						<sprite name="Negative" depth="6" pos="130,0" size="36,36" sprite="ui_game_symbol_x" color="[red]" />
+					</panel>
+				</rect>
+
+				<grid name="hud" pos="-200,50" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
+					<rect width="62" height="62" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+						<sprite name="waterToActiveItemA" depth="1" pos="-69,0" size="35,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+						<sprite name="activeItemDiamondA1" depth="3" pos="0,0" size="52,52" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="activeItemDiamondA2" depth="4" pos="0,0" size="50,50" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="activeItemDiamondA3" depth="2" pos="0,0" size="50,50" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+
+						<sprite name="activeItemToCountA" depth="1" pos="18,18" size="10,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="45" />
+						<sprite name="activeItemToCountB" depth="1" pos="25,25" size="8,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+						<sprite name="Icon" depth="5" pos="0,0" size="32,32" atlas="{staticonatlas|once}" sprite="{staticon}" color="{staticoncolor}" foregroundlayer="true" pivot="center" />
+
+						<sprite name="activeItemBackground" depth="2" pos="100,25" size="100,23" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" pivot="center" />
+						<label name="activeItemCount" depth="8" pos="100,25" size="100,23" text="{statcurrentwithmax}" color="[hudLabelPrimary]" font_size="18" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" />
+
+						<sprite name="activeItemLineLeftA" depth="3" pos="40,43" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" />
+						<sprite name="activeItemLineLeftB" depth="2" pos="40,43" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" />
+						<sprite name="activeItemLineLeftC" depth="3" pos="40,7" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" />
+						<sprite name="activeItemLineLeftD" depth="2" pos="40,17" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" />
+
+						<sprite name="activeItemLeftDiamondA1" depth="3" pos="40,25" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+						<sprite name="activeItemLeftDiamondA2" depth="4" pos="40,25" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+						<sprite name="activeItemLineRightA" depth="3" pos="144,43" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" />
+						<sprite name="activeItemLineRightB" depth="2" pos="159,43" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" />
+						<sprite name="activeItemLineRightC" depth="3" pos="144,7" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" />
+						<sprite name="activeItemLineRightD" depth="2" pos="159,17" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" />
+					</rect>
+				</grid>
+
+				<rect name="hud" pos="-200,50" rows="1" cols="2" width="168" side="right">
+					<rect width="62" height="62" pos="0,0" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+						<sprite name="toolBeltReplacementA" depth="1" pos="-720,0" size="850,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="center" />
+
+						<sprite name="waterToVehicleFuelA" depth="1" pos="-69,0" size="35,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+						<sprite name="vehicleHealthDiamondA1" depth="3" pos="0,0" size="52,52" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="vehicleHealthDiamondA2" depth="4" pos="0,0" size="50,50" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="vehicleHealthDiamondA3" depth="2" pos="0,0" size="50,50" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+
+						<sprite name="BarContent" depth="5" pos="0,0" size="43,43" sprite="menu_empty3px" color="[statBarVehicleHealth]" type="filled" fill="0" rotation="45" filldirection="radial360" pivot="center" />
+
+						<sprite name="Icon" depth="7" size="20,20" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
+						<label name="TextContent" depth="7" pos="-24,-24" size="62,20" text="{statcurrentwithmax}" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
+
+						<sprite name="vehicleHealthToFuelA" depth="1" pos="18,18" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="45" />
+						<sprite name="vehicleHealthToFuelB" depth="1" pos="24,24" size="44,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+						<sprite name="vehicleHealthToFuelC" depth="1" pos="74,18" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" rotation="-45" />
+					</rect>
+
+					<rect width="62" height="62" pos="90,0" controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}">
+						<sprite name="vehicleFuelDiamondA1" depth="3" pos="0,0" size="52,52" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="vehicleFuelDiamondA2" depth="4" pos="0,0" size="50,50" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+						<sprite name="vehicleFuelDiamondA3" depth="2" pos="0,0" size="50,50" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+
+						<sprite name="BarContent" depth="5" pos="0,0" size="43,43" sprite="menu_empty3px" color="[statBarVehicleFuel]" type="filled" fill="0" rotation="45" filldirection="radial360" pivot="center" />
+
+						<sprite name="Icon" depth="7" size="20,20" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
+						<label name="TextContent" depth="7" pos="-24,-24" size="62,20" text="{statcurrentwithmax}" color="[hudLabelPrimary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" rotation="-45" />
+					</rect>
+				</rect>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Quest Tracker -->
+
+		<remove xpath="/windows/window[@name='windowQuestTracker']" />
+
+		<append xpath="/windows">
+			<window name="windowQuestTracker" depth="-20" pos="-255,-90" size="300,100" controller="QuestTrackerWindow" visible="{showquest}">
+
+				<sprite name="diamondToQTRDiamondA" depth="1" pos="225,-16" size="25,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="questTrackerRightDiamondA1" depth="3" pos="195,-16" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="questTrackerRightDiamondA2" depth="4" pos="195,-16" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="activeItemLineRightA" depth="3" pos="195,4" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+				<sprite name="activeItemLineRightB" depth="2" pos="195,-16" size="1,41" sprite="menu_empty3px" color="[mainLineColor]" pivot="center" />
+				<sprite name="activeItemLineRightC" depth="3" pos="195,-37" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<sprite name="questTrackerHeaderBackground" depth="2" pos="80,-16" size="200,32" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" pivot="center" />
+				<label name="questTitle" depth="8" pos="80,-16" size="200,32" text="{questtitle}" color="[hudLabelPrimary]" font_size="24" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" overflow="ShrinkContent" />
+
+				<sprite name="activeItemLineLeftA" depth="3" pos="-36,4" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="activeItemLineLeftB" depth="2" pos="-36,-16" size="1,41" sprite="menu_empty3px" color="[mainLineColor]" pivot="center" />
+				<sprite name="activeItemLineLeftC" depth="3" pos="-36,-37" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="questTrackerLeftDiamondA1" depth="3" pos="-35,-16" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="questTrackerLeftDiamondA2" depth="4" pos="-35,-16" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="border" depth="3" pos="-90,-16" size="42,42" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+				<sprite name="Background" depth="4" pos="-90,-16" size="40,40" sprite="menu_empty2px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+				<sprite name="Foreground" depth="5" pos="-90,-16" size="33,33" sprite="menu_empty2px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
+
+				<sprite name="windowIcon" depth="7" pos="-90,-16" size="24,24" sprite="{questicon}" color="[white]" pivot="center" effect="outline" />
+
+				<sprite name="titleToQTRDiamondA" depth="1" pos="-42,-16" size="18,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+
+				<grid name="objectiveList" pos="-60,-50" rows="12" cols="1" cell_width="300" cell_height="32" repeat_content="true" arrangement="vertical" controller="QuestTrackerObjectiveList" complete_icon="smx_hud_general_checkmark_icon" incomplete_icon="smx_hud_general_cancel_icon" complete_color="[green]" incomplete_color="[red]">
+					<Z2_quest_objective_tracker_entry />
+				</grid>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Loot Timer -->
+
+		<remove xpath="/windows/window[@name='windowTimer']" />
+
+		<append xpath="/windows">
+			<window name="windowTimer" anchor="CenterCenter">
+				<rect depth="15" size="68,68" style="hover" on_press="true" highlight_color="[lightGrey]" pivot="center" controller="Timer">
+					<!--label name="action" depth="3" pos="0,50" size="200,26" text="{caption}" font_size="24" justify="center" pivot="center" /-->
+					<sprite name="border" depth="3" pos="0,0" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+					<sprite name="background" depth="4" pos="0,0" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+					<sprite name="Foreground" depth="5" pos="0,0" size="53,53" sprite="menu_empty3px" color="[searchTimerBackground]" rotation="45" pivot="center" type="filled" fill="{percent}" filldirection="radial360" />
+					<label name="time" depth="9" size="75,24" text="{timeleft}" font_size="22" justify="center" pivot="center" />
+				</rect>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Throw Power -->
+
+		<remove xpath="/windows/window[@name='windowThrow']" />
+
+		<append xpath="/windows">
+			<window name="windowThrow" depth="6" anchor="CenterCenter" controller="ThrowPower">
+				<rect pos="0,-60">
+					<sprite name="throwPowerRightA" depth="3" pos="165,15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="right" />
+					<sprite name="throwPowerRightB" depth="2" pos="165,15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="top" />
+					<sprite name="throwPowerRightC" depth="2" pos="165,-15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="throwPowerRightD" depth="3" pos="165,-15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="right"/>
+
+					<sprite name="background" depth="2" pos="0,0" size="302,12" sprite="menu_empty3px" color="[throwPowerBackground]" type="sliced" pivot="center" />
+					<filledsprite name="bar" depth="3" pos="0,0" size="300,10" sprite="menu_empty3px" color="[throwPowerBar]" fill="{fill}" filldirection="horizontal" foregroundlayer="true" pivot="center" />
+
+					<sprite name="throwPowerLeftA" depth="3" pos="-166,15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
+					<sprite name="throwPowerLeftB" depth="2" pos="-166,15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="top" />
+					<sprite name="throwPowerLeftC" depth="2" pos="-166,-15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="throwPowerLeftD" depth="3" pos="-166,-15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
+
+					<sprite name="throwPowerRightDiamondA1" depth="4" pos="165,0" size="11,11" sprite="menu_empty" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="throwPowerRightDiamondA2" depth="5" pos="165,0" size="10,10" sprite="menu_empty" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+					<sprite name="throwPowerToToolbeltA" depth="2" pos="170,0" size="71,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
+					<sprite name="throwPowerToToolbeltB" depth="3" pos="240,0" size="9,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" rotation="-45" />
+					<sprite name="throwPowerToToolbeltC" depth="4" pos="245,-6" size="161,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
+					<sprite name="throwPowerToToolbeltD" depth="5" pos="405,-6" size="1,9" sprite="menu_empty" color="[mainLineColor]" pivot="top" rotation="45" />
+					<sprite name="throwPowerToToolbeltE" depth="4" pos="411,-252" size="1,240" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="throwPowerToToolbeltF" depth="3" pos="417,-259" size="1,9" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" rotation="45" />
+					<sprite name="throwPowerToToolbeltG" depth="2" pos="417,-400" size="1,141" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
+
+					<sprite name="throwPowerBottomDiamondA1" depth="4" pos="417,-408" size="11,11" sprite="menu_empty" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="throwPowerBottomDiamondA2" depth="5" pos="417,-408" size="10,10" sprite="menu_empty" color="[hudDiamondFG]" rotation="45" pivot="center" />
+				</rect>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Radial Menu -->
+
+		<remove xpath="/windows/window[@name='windowRadial']" />
+
+		<append xpath="/windows">
+			<window name="windowRadial" anchor="CenterCenter">
+				<rect name="radialPanel" repeat_content="true" count="20" pivot="center">
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<radial_entry />
+					<label depth="10" name="selection" size="150,50" text=" " font_size="24" crispness="Never" effect="outline" effect_distance="1,1" justify="center" pivot="center" />
+				</rect>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Party Frames -->
+
+		<remove xpath="/windows/window[@name='windowGroupBars']" />
+
+		<append xpath="/windows">
+			<window name="windowGroupBars" depth="3" controller="PartyWindow">
+				<grid name="hud" pos="100,-130" width="168" rows="5" cols="1" cell_width="168" cell_height="43" repeat_content="true" controller="PartyEntryList" side="left">
+					<Z2_party_entry />
+				</grid>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Target Frame -->
+
+		<remove xpath="/windows/window[@name='windowTargetBar']" />
+
+		<append xpath="/windows">
+			<window name="windowTargetBar" depth="4" controller="TargetBar">
+				<rect pos="0,-75" size="400,36" visible="{visible}">
+					<sprite name="compassRightDiamondA1" depth="4" pos="165,50" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="compassRightDiamondA2" depth="5" pos="165,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+					<sprite name="compassToTargetBarA" depth="2" pos="172,50" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+					<sprite name="compassToTargetBarB" depth="3" pos="187,50" size="12,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="-45" />
+					<sprite name="compassToTargetBarC" depth="4" pos="196,25" size="1,34" sprite="menu_empty3px" color="[mainLineColor]" pivot="center" />
+					<sprite name="compassToTargetBarB" depth="3" pos="187,0" size="12,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="45" />
+					<sprite name="compassToTargetBarD" depth="2" pos="172,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+					<sprite name="targetBarRightA" depth="3" pos="165,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+					<sprite name="targetBarRightB" depth="2" pos="165,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+					<sprite name="targetBarRightC" depth="2" pos="165,-16" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="targetBarRightD" depth="3" pos="165,-16" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right"/>
+
+					<sprite name="targetBarRightDiamondA1" depth="4" pos="165,0" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="targetBarRightDiamondA2" depth="5" pos="165,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+					<sprite name="targetBackground" depth="2" pos="0,0" size="300,24" sprite="menu_empty3px" color="[statPartyHealthBG]" type="sliced" pivot="center" />
+					<filledsprite name="BarContent" depth="3" pos="-1,0" size="294,20" sprite="menu_empty3px" color="200,0,0,180" type="filled" fill="{fill}" globalopacity="false" pivot="center" />
+					<label name="TextContent" depth="4" pos="10,0" size="300,20" text="{name}" font_size="22" color="[white]" justify="left" pivot="center" />
+					<label name="TextContent" depth="4" pos="-10,0" size="300,20" text="{currentwithmax}" font_size="22" color="[white]" justify="right" pivot="center" />
+
+					<sprite name="targetBarLeftA" depth="3" pos="-165,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+					<sprite name="targetBarLeftB" depth="2" pos="-165,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+					<sprite name="targetBarLeftC" depth="2" pos="-165,-16" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="targetBarLeftD" depth="3" pos="-165,-16" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				</rect>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Chat Output -->
+
+		<remove xpath="/windows/window[@name='chatoutput']" />
+
+		<append xpath="/windows">
+			<window name="chatoutput" depth="10" pos="65,-350" size="500,250" anchor="LeftTop" controller="ChatOutput" fadeout_wait_time="5" fadeout_duration="2">
+				<textlist name="txtOutput" depth="2" pos="8,-214" size="484,210" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" list_style="chat" pivot="bottomleft" />
+			</window>
+		</append>
+
+
+<!--	// Z2 // Chat Input -->
+
+		<remove xpath="/windows/window[@name='chat']" />
+
+		<append xpath="/windows">
+			<window name="chat" depth="10" pos="65,-350" size="500,250" anchor="LeftTop" controller="Chat" cursor_area="true">
+				<sprite name="chatLeftDiamondA1" depth="3" pos="-40,-30" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="chatLeftDiamondA2" depth="4" pos="-40,-30" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="diamondToDiamond" depth="2" pos="-32,-30" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="chatRightDiamondA1" depth="3" pos="-15,-30" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="chatRightDiamondA2" depth="4" pos="-15,-30" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="diamondToDiamond" depth="2" pos="-15,-22" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+				<sprite name="diamondToDiamond" depth="3" pos="-15,8" size="530,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+				<sprite name="diamondToDiamond" depth="3" pos="515,8" size="1,30" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+
+				<sprite name="chatLeftDiamondB1" depth="3" pos="515,-30" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="chatLeftDiamondB2" depth="4" pos="515,-30" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="diamondToDiamond" depth="2" pos="-15,-37" size="1,225" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+				<sprite name="diamondToDiamond" depth="3" pos="-15,-260" size="30,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+				<sprite name="chatRightDiamondB1" depth="3" pos="22,-260" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+				<sprite name="chatRightDiamondB2" depth="4" pos="22,-260" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+				<sprite name="border" depth="8" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" />
+				<sprite color="[darkGrey]" type="sliced" globalopacitymod="0.7" />
+
+				<rect name="input" depth="2" pos="0,-218" height="32">
+					<sprite name="border" depth="8" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" />
+
+					<combobox name="cbxTarget" pos="2,-6" width="100" height="22" type="ComboBoxList`1[EChatType]" value_max="party" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" localization_prefix="xuiChatTarget" />
+					<textfield name="txtInput" depth="2" pos="110,-16" width="386" height="28" backgroundcolor="[transparent]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" justify="left" pivot="left" overflow="ClampContent" max_line_count="1" />
+				</rect>
+			</window>
+		</append>
+
+
+<!--	// Z2 // Interaction -->
+
+		<remove xpath="/windows/window[@name='interactionPrompt']" />
+
+		<append xpath="/windows">
+			<window name="interactionPrompt" pos="0,55" width="800" height="30" anchor="CenterCenter" controller="InteractionPrompt" fade_window="false">
+
+					<sprite name="targetBarLeftA" depth="3" pos="-400,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+					<sprite name="targetBarLeftB" depth="2" pos="-400,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+					<sprite name="targetBarLeftC" depth="2" pos="-400,-16" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="targetBarLeftD" depth="3" pos="-400,-16" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
+
+					<sprite name="targetBarRightDiamondA1" depth="4" pos="-400,0" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="targetBarRightDiamondA2" depth="5" pos="-400,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+					<sprite name="targetBackground" depth="2" pos="0,0" sprite="menu_empty3px" color="[interactionPromptBG]" type="sliced" pivot="center" />
+
+				<label name="lblText" depth="3" text="{text}" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" justify="center" pivot="center" parse_actions="true" overflow="ShrinkContent" />
+
+					<sprite name="targetBarRightA" depth="3" pos="400,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
+					<sprite name="targetBarRightB" depth="2" pos="400,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
+					<sprite name="targetBarRightC" depth="2" pos="400,-16" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="targetBarRightD" depth="3" pos="400,-16" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right"/>
+
+					<sprite name="targetBarRightDiamondA1" depth="4" pos="400,0" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="targetBarRightDiamondA2" depth="5" pos="400,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
+
+			</window>
+		</append>
+
+
+<!-- 	// Z2 // Clean Menu Background -->
+
+		<append xpath="/windows">
+			<window name="cleanMenuBackground" style="nonpaging.window" controller="WindowNonPagingHeader" />
+		</append>
+
+</ProjectZ2>

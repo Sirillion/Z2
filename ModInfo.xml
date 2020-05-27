@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Z2" />
+		<Description value="Z2 is a HUD conversion modlet for 7 Days To Die." />
+		<Author value="Sirillion" />
+		<Version value="18.4.r1" />
+		<Website value="" />
+	</ModInfo>
+</xml>

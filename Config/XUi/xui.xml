@@ -1,0 +1,89 @@
+<ProjectZ2>
+
+<!--	// Z2 // Scale -->
+
+		<set xpath="/xui/ruleset/@scale">1.255</set>
+
+
+<!--	// Z2 // Compass -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
+			<window name="windowCompass" anchor="CenterTop" />
+			<!--window name="windowTargetBar" anchor="CenterTop" /-->
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='compass']" name="actionset">false</setattribute>
+
+
+<!--	// Z2 // Interaction -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='interactionPrompt']">
+			<window name="interactionPrompt" />
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='interactionPrompt']" name="actionset">false</setattribute>
+
+
+<!--	// Z2 // Search Timer -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='timer']">
+			<window name="windowTimer" />
+		</set>
+
+
+<!--	// Z2 // Throw Power -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='throwpower']">
+			<window name="windowThrow" />
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='throwpower']" name="actionset">false</setattribute>
+
+
+<!--	// Z2 // Toolbelt -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']">
+			<window name="windowToolbelt" anchor="CenterBottom" />
+			<window name="HUDLeftStatBars" anchor="LeftBottom" />
+			<window name="HUDRightStatBars" anchor="RightBottom" />
+			<window name="windowQuestTracker" anchor="RightTop" />
+			<window name="windowGroupBars" anchor="LeftTop" />
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='toolbelt']" name="actionset">false</setattribute>
+
+
+<!--	// Z2 // Radial Menu -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='radial']">
+			<window name="windowRadial" />
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='radial']" name="actionset">keyboard</setattribute>
+		<setattribute xpath="/xui//window_group[@name='radial']" name="controller">Radial</setattribute>
+
+
+<!--	// Z2 // Chat Output -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='chatoutput']">
+			<window name="chatoutput" />
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='chatoutput']" name="actionset">false</setattribute>
+		
+
+<!--	// Z2 // Chat Input -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='chat']">
+			<window name="chat" />
+		</set>
+
+
+<!--	// Z2 // Chat Input -->
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='ingameMenu']">
+			<window name="ingameMenu" />
+			<window name="cleanMenuBackground" />
+		</set>
+
+</ProjectZ2>
