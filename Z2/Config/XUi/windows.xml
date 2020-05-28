@@ -18,7 +18,7 @@
 				<sprite name="compassIndicatorDiamondA2" depth="5" pos="150,1" size="10,10" sprite="menu_empty3px" color="[compassIndicator]" rotation="45" pivot="center" />
 
 				<sprite name="compassBackground" depth="2" pos="0,-5" size="300,23" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" />
-				<texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@https://i.imgur.com/ArNiBMX.png" color="[iconColor]" tooltip="CHARACTER" rect_size="0.25,1" rect_offset=".8,0" />
+				<texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@https://i.imgur.com/ktagIqe.png" color="[iconColor]" tooltip="CHARACTER" rect_size="0.25,1" rect_offset=".8,0" />
 
 				<sprite name="compassLeftA" depth="3" pos="-16,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 				<sprite name="compassLeftB" depth="2" pos="-16,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
