@@ -5,19 +5,29 @@
 		<append xpath="/styles/global">
 			<style_entry name="alignmenthelper"						value="255,128,0,255" />
 
-			<style_entry name="hudDiamondFG"						value="128,128,128,255" />
-			<style_entry name="hudElementBRDR"						value="0,0,0,255" />
 			<style_entry name="hudElementBG"						value="96,96,96,128" />
-			<style_entry name="hudLabelPrimary"						value="128,128,128,255" />
+			<style_entry name="hudElementBRDR"						value="0,0,0,255" />
+			<style_entry name="hudDiamondFG"						value="128,128,128,255" />
+
+			<style_entry name="hudDiamondFG2"						value="0,255,255,255" />
+
+			<style_entry name="hudDiamondNegative"					value="255,0,0,255" />
+
+			<style_entry name="chatOutputText"						value="255,255,255,255" />
+			<style_entry name="chatInputText"						value="255,255,255,255" />
+			<style_entry name="hudLabelPrimary"						value="255,255,255,255" />
+			<style_entry name="hudLabelSecondary"					value="255,255,255,255" />
+
 			<style_entry name="hudIconPrimary"						value="255,255,255,255" />
 			<style_entry name="hudIconBG"							value="0,0,0,128" />
 
 			<style_entry name="mainLineColor"						value="255,128,0,255" />
+			<style_entry name="mainLineColor2"						value="0,255,255,255" />
 
 			<style_entry name="compassIndicator"					value="255,128,0,255" />
+			<style_entry name="interactionPromptLabel"				value="255,255,255,255" />
 			<style_entry name="interactionPromptBG"					value="0,0,0,200" />
 			<style_entry name="searchTimerBackground"				value="96,96,96,128" />
-
 			<style_entry name="throwPowerBackground"				value="0,0,0,150" />
 			<style_entry name="throwPowerBar"						value="0,180,0,120" />
 
@@ -31,10 +41,11 @@
 			<style_entry name="experienceBarLoss"					value="255,153,153,128" />
 
 			<style_entry name="statPartyHealthBG"					value="0,0,0,200" />
+			<style_entry name="statTargetHealthBar"					value="200,0,0,180" />
 			<style_entry name="teamLeaderIndicator"					value="255,215,0,200" />
 
-			<style_entry name="statBarVehicleFuel"					value="154,205,50,128" />
 			<style_entry name="statBarVehicleHealth"				value="175,30,25,128" />
+			<style_entry name="statBarVehicleFuel"					value="154,205,50,128" />
 		</append>
 
 

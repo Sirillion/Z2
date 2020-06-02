@@ -5,7 +5,7 @@
 		<Name value="Z2" />
 		<Description value="Z2 is a HUD conversion modlet for 7 Days To Die." />
 		<Author value="Sirillion" />
-		<Version value="18.4.r1" />
-		<Website value="" />
+		<Version value="18.4.r2" />
+		<Website value="https://github.com/Sirillion/Z2" />
 	</ModInfo>
 </xml>

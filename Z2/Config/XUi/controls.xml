@@ -9,6 +9,8 @@
 					<sprite name="background" depth="3" size="77,77" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" globalopacity="true" pivot="center" fillcenter="false" />
 					<sprite name="highlightOverlay" depth="4" size="70,70" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" globalopacity="true" pivot="center" />
 
+					<texture name="backgroundTexture" depth="5" size="73,73" material="Materials/Transparent Colored" globalopacity="true" pivot="center" />
+
 					<sprite name="itemIcon" depth="7" size="64,64" atlas="ItemIconAtlas" sprite="{itemicon}" color="{iconcolor}" foregroundlayer="true" pivot="center" />
 					<sprite name="lockTypeIcon" depth="8" pos="-26,26" size="20,20" sprite="" foregroundlayer="true" pivot="center" />
 					<sprite name="itemtypeicon" depth="8" pos="-26,26" size="20,20" sprite="ui_game_symbol_{itemtypeicon}" color="{itemtypeicontint}" foregroundlayer="true" visible="{hasitemtypeicon}" pivot="center" />
