@@ -461,23 +461,26 @@
 		<append xpath="/windows">
 			<window name="windowThrow" depth="6" anchor="CenterCenter" controller="ThrowPower">
 				<rect pos="0,-60">
-					<sprite name="throwPowerRightA" depth="3" pos="165,15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="right" />
-					<sprite name="throwPowerRightB" depth="2" pos="165,15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="top" />
-					<sprite name="throwPowerRightC" depth="2" pos="165,-15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
-					<sprite name="throwPowerRightD" depth="3" pos="165,-15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="right"/>
-
-					<sprite name="background" depth="2" pos="0,0" size="302,12" sprite="menu_empty3px" color="[throwPowerBackground]" type="sliced" pivot="center" />
-					<filledsprite name="bar" depth="3" pos="0,0" size="300,10" sprite="menu_empty3px" color="[throwPowerBar]" fill="{fill}" filldirection="horizontal" foregroundlayer="true" pivot="center" />
+					<sprite name="throwPowerRightDiamondA1" depth="4" pos="-166,0" size="11,11" sprite="menu_empty" color="[hudElementBRDR]" rotation="45" pivot="center" />
+					<sprite name="throwPowerRightDiamondA2" depth="5" pos="-166,0" size="10,10" sprite="menu_empty" color="[hudDiamondFG]" rotation="45" pivot="center" />
 
 					<sprite name="throwPowerLeftA" depth="3" pos="-166,15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
 					<sprite name="throwPowerLeftB" depth="2" pos="-166,15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="top" />
 					<sprite name="throwPowerLeftC" depth="2" pos="-166,-15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
 					<sprite name="throwPowerLeftD" depth="3" pos="-166,-15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
 
+					<sprite name="background" depth="2" pos="0,0" size="331,30" sprite="menu_empty3px" color="[throwPowerBackground]" type="sliced" pivot="center" />
+					<filledsprite name="bar" depth="3" pos="0,0" size="329,28" sprite="menu_empty3px" color="[throwPowerBar]" fill="{fill}" filldirection="horizontal" foregroundlayer="true" pivot="center" />
+
+					<sprite name="throwPowerRightA" depth="3" pos="165,15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="right" />
+					<sprite name="throwPowerRightB" depth="2" pos="165,15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="top" />
+					<sprite name="throwPowerRightC" depth="2" pos="165,-15" size="1,10" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
+					<sprite name="throwPowerRightD" depth="3" pos="165,-15" size="15,1" sprite="menu_empty" color="[mainLineColor]" pivot="right"/>
+
 					<sprite name="throwPowerRightDiamondA1" depth="4" pos="165,0" size="11,11" sprite="menu_empty" color="[hudElementBRDR]" rotation="45" pivot="center" />
 					<sprite name="throwPowerRightDiamondA2" depth="5" pos="165,0" size="10,10" sprite="menu_empty" color="[hudDiamondFG]" rotation="45" pivot="center" />
 
-					<sprite name="throwPowerToToolbeltA" depth="2" pos="170,0" size="71,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
+					<!--sprite name="throwPowerToToolbeltA" depth="2" pos="170,0" size="71,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
 					<sprite name="throwPowerToToolbeltB" depth="3" pos="240,0" size="9,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" rotation="-45" />
 					<sprite name="throwPowerToToolbeltC" depth="4" pos="245,-6" size="161,1" sprite="menu_empty" color="[mainLineColor]" pivot="left" />
 					<sprite name="throwPowerToToolbeltD" depth="5" pos="405,-6" size="1,9" sprite="menu_empty" color="[mainLineColor]" pivot="top" rotation="45" />
@@ -486,7 +489,7 @@
 					<sprite name="throwPowerToToolbeltG" depth="2" pos="417,-400" size="1,141" sprite="menu_empty" color="[mainLineColor]" pivot="bottom" />
 
 					<sprite name="throwPowerBottomDiamondA1" depth="4" pos="417,-408" size="11,11" sprite="menu_empty" color="[hudElementBRDR]" rotation="45" pivot="center" />
-					<sprite name="throwPowerBottomDiamondA2" depth="5" pos="417,-408" size="10,10" sprite="menu_empty" color="[hudDiamondFG]" rotation="45" pivot="center" />
+					<sprite name="throwPowerBottomDiamondA2" depth="5" pos="417,-408" size="10,10" sprite="menu_empty" color="[hudDiamondFG]" rotation="45" pivot="center" /-->
 				</rect>
 			</window>
 		</append>

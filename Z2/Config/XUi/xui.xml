@@ -2,7 +2,7 @@
 
 <!--	// Z2 // Scale -->
 
-		<!--set xpath="/xui/ruleset/@scale">1.255</set--> <!-- Redundant: Release 2 was re-coded to better comply with scaling. -->
+		<set xpath="/xui/ruleset/@scale">1.1</set> <!-- Redundant: Release 2 was re-coded to better comply with scaling. -->
 
 
 <!--	// Z2 // Compass -->
