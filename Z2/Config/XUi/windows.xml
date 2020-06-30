@@ -1,4 +1,4 @@
-<ProjectZ2>
+<ProjectZ2WINDOWS>
 
 <!--	// Z2 // Alignment Helper Lines -->
 
@@ -21,7 +21,10 @@
 				<sprite name="compassIndicatorDiamondA2" depth="5" pos="150,1" size="10,10" sprite="menu_empty3px" color="[compassIndicator]" rotation="45" pivot="center" />
 
 				<sprite name="compassBackground" depth="2" pos="0,-5" size="300,23" sprite="menu_empty3px" color="[hudElementBG]" type="sliced" />
-				<texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@https://i.imgur.com/ktagIqe.png" color="[iconColor]" tooltip="CHARACTER" rect_size="0.25,1" rect_offset=".8,0" />
+				<texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@https://i.imgur.com/ktagIqe.png" color="[iconColor]" rect_size="0.25,1" rect_offset=".8,0" /> <!-- Online hosted, no letters. -->
+				<!--texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@https://i.imgur.com/lD2sVKP.png" color="[iconColor]" rect_size="0.30,1" rect_offset=".8,0" /--> <!-- Online hosted, letters. -->
+				<!--texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@modfolder://Textures/projectz2_compass_line_nLetters.png" color="[iconColor]" rect_size="0.25,1" rect_offset=".8,0" /--> <!-- Local Asset, no letters. -->
+				<!--texture name="compassTexture" depth="8" pos="0,-5" size="300,23" texture="@modfolder://Textures/projectz2_compass_line_wLetters.png" color="[iconColor]" rect_size="0.30,1" rect_offset=".8,0" /--> <!-- Local Asset, letters. -->
 
 				<sprite name="compassLeftA" depth="3" pos="-16,0" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 				<sprite name="compassLeftB" depth="2" pos="-16,0" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
@@ -40,7 +43,7 @@
 
 		<append xpath="/windows">
 			<window name="dayTimeHUD" depth="4" pos="0,91" size="300,100" controller="CompassWindow">
-				<texture name="compassTexture" depth="8" pos="0,0" size="300,23" texture="@https://i.imgur.com/ktagIqe.png" color="[iconColor]" tooltip="CHARACTER" rect_size="0.25,1" rect_offset=".8,0" />
+				<texture name="compassTexture" depth="8" pos="0,0" size="300,23" texture="Textures/UI/ui_game_compass" color="[iconColor]" rect_size="0.25,1" rect_offset=".8,0" />
 
 				<sprite name="compassToTimeLine" depth="1" pos="247,-116" size="500,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 
@@ -133,7 +136,7 @@
 				<sprite name="timeLineToStatsD" depth="2" pos="25,50" size="85,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 
 				<rect name="hud" pos="100,98" controller="BuffPopoutList" side="left">
-					<panel name="item" pos="0,0" width="52" height="52" disableautobackground="true" visible="false">
+					<panel name="item" pos="0,0" width="52" height="52" disableautobackground="true" visible="false" style="press" sound="[recipe_click]" on_hover="true">
 						<sprite name="border" depth="3" size="32,32" sprite="menu_empty2px" color="[hudElementBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
 						<sprite name="Background" depth="4" size="30,30" sprite="menu_empty2px" color="[hudDiamondFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
 						<sprite name="Foreground" depth="5" size="23,23" sprite="menu_empty2px" color="[hudElementBG]" type="sliced" rotation="45" pivot="center" />
@@ -170,7 +173,7 @@
 
 						<sprite name="Icon" depth="8" size="20,20" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
 						<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{statcurrentwithmax}" color="[hudLabelSecondary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" />
-						<sprite name="labelContrastHealth" depth="6" pos="0,-38" size="62,20" sprite="menu_empty3px" color="[hudElementBG]" pivot="center" />
+						<!--sprite name="labelContrastHealth" depth="6" pos="0,-38" size="62,20" sprite="menu_empty3px" color="[hudElementBG]" pivot="center" /-->
 					</rect>
 
 					<rect width="62" height="62" pos="-220,45" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
@@ -240,7 +243,7 @@
 
 				<sprite name="toolbeltToStatHungerB" depth="1" pos="377,0" size="80,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 
-				<grid name="inventory" depth="1" pos="0,0" rows="1" cols="8" cell_width="90" cell_height="75" controller="Toolbelt" repeat_content="true" pivot="center">
+				<grid name="inventory" depth="10" pos="45,-38" rows="1" cols="8" cell_width="90" cell_height="75" controller="Toolbelt" repeat_content="true" pivot="center">
 					<Z2_item_stack name="0" />
 				</grid>
 			</window>
@@ -525,7 +528,7 @@
 
 		<append xpath="/windows">
 			<window name="windowGroupBars" depth="3" controller="PartyWindow">
-				<grid name="hud" pos="100,-130" width="168" rows="5" cols="1" cell_width="168" cell_height="43" repeat_content="true" controller="PartyEntryList" side="left">
+				<grid name="hud" pos="100,-130" width="168" rows="7" cols="1" cell_width="168" cell_height="43" repeat_content="true" controller="PartyEntryList" side="left">
 					<Z2_party_entry />
 				</grid>
 			</window>
@@ -537,7 +540,7 @@
 		<remove xpath="/windows/window[@name='windowTargetBar']" />
 
 		<append xpath="/windows">
-			<window name="windowTargetBar" depth="4" controller="TargetBar">
+			<window name="windowTargetBar" depth="4" controller="TargetBar" visibility="never">
 				<rect pos="0,-75" size="400,36" visible="{visible}">
 					<sprite name="compassRightDiamondA1" depth="4" pos="165,50" size="11,11" sprite="menu_empty3px" color="[hudElementBRDR]" rotation="45" pivot="center" />
 					<sprite name="compassRightDiamondA2" depth="5" pos="165,50" size="10,10" sprite="menu_empty3px" color="[hudDiamondFG]" rotation="45" pivot="center" />
@@ -626,7 +629,7 @@
 		<remove xpath="/windows/window[@name='interactionPrompt']" />
 
 		<append xpath="/windows">
-			<window name="interactionPrompt" pos="0,55" width="800" height="30" anchor="CenterCenter" controller="InteractionPrompt" fade_window="false">
+			<window name="interactionPrompt" pos="0,55" width="800" height="30" anchor="CenterCenter" controller="InteractionPrompt" fade_delay="0.02">
 
 				<sprite name="targetBarLeftA" depth="3" pos="-400,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 				<sprite name="targetBarLeftB" depth="2" pos="-400,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
@@ -638,7 +641,7 @@
 
 				<sprite name="targetBackground" depth="2" pos="0,0" sprite="menu_empty3px" color="[interactionPromptBG]" type="sliced" pivot="center" />
 
-				<label name="lblText" depth="3" text="{text}" color="[interactionPromptLabel]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" justify="center" pivot="center" parse_actions="true" overflow="ShrinkContent" />
+				<label name="lblText" depth="3" text="{text}" color="[interactionPromptLabel]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" effect_color="0,0,0,150" justify="center" pivot="center" parse_actions="true" actions_default_format="( [AF1E19]###[-] )" overflow="ShrinkContent" />
 
 				<sprite name="targetBarRightA" depth="3" pos="400,15" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="right" />
 				<sprite name="targetBarRightB" depth="2" pos="400,15" size="1,10" sprite="menu_empty3px" color="[mainLineColor]" pivot="top" />
@@ -658,4 +661,4 @@
 			<window name="cleanMenuBackground" style="nonpaging.window" controller="WindowNonPagingHeader" />
 		</append>
 
-</ProjectZ2>
+</ProjectZ2WINDOWS>

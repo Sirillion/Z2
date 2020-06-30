@@ -1,4 +1,4 @@
-<ProjectZ2>
+<ProjectZ2STYLES>
 
 <!--	// Z2 // Globals -->
 
@@ -31,8 +31,8 @@
 			<style_entry name="throwPowerBackground"				value="0,0,0,150" />
 			<style_entry name="throwPowerBar"						value="0,180,0,120" />
 
-			<style_entry name="playerHealthBar"						value="255,0,0,128" />
-			<style_entry name="playerStaminaBar"					value="0,54,255,128" />
+			<style_entry name="playerHealthBar"						value="255,0,0,200" />
+			<style_entry name="playerStaminaBar"					value="0,54,255,200" />
 			<style_entry name="playerHungerBar"						value="23,81,23" />
 			<style_entry name="playerThirstBar"						value="16,77,96" />
 
@@ -44,8 +44,8 @@
 			<style_entry name="statTargetHealthBar"					value="200,0,0,180" />
 			<style_entry name="teamLeaderIndicator"					value="255,215,0,200" />
 
-			<style_entry name="statBarVehicleHealth"				value="175,30,25,128" />
-			<style_entry name="statBarVehicleFuel"					value="154,205,50,128" />
+			<style_entry name="statBarVehicleHealth"				value="175,30,25,200" />
+			<style_entry name="statBarVehicleFuel"					value="154,205,50,200" />
 		</append>
 
 
@@ -70,4 +70,4 @@
 			</style>
 		</append>
 
-</ProjectZ2>
+</ProjectZ2STYLES>

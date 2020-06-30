@@ -1,20 +1,29 @@
-<ProjectZ2>
+<ProjectZ2XUI>
 
 <!--	// Z2 // Scale -->
 
-		<set xpath="/xui/ruleset/@scale">1.1</set> <!-- Redundant: Release 2 was re-coded to better comply with scaling. -->
+		<!--set xpath="/xui/ruleset/@scale">1.1</set--> <!-- Redundant: Release 2 was re-coded to better comply with scaling. -->
 
 
 <!--	// Z2 // Compass -->
 
 		<set xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
 			<window name="windowCompass" anchor="CenterTop" />
+			<window name="windowTargetBar" anchor="CenterTop" />
+			<window name="onScreenIcons" />
 			<window name="dayTimeHUD" anchor="LeftTop" />
-			<!--window name="windowTargetBar" anchor="CenterTop" /-->
 		</set>
 
 		<setattribute xpath="/xui//window_group[@name='compass']" name="actionset">false</setattribute>
+<!--
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
+			<window name="windowCompass" anchor="CenterTop" />
+			<window name="dayTimeHUD" anchor="LeftTop" />
+			<window name="windowTargetBar" anchor="CenterTop" />
+		</set>
 
+		<setattribute xpath="/xui//window_group[@name='compass']" name="actionset">false</setattribute>
+-->
 
 <!--	// Z2 // Interaction -->
 
@@ -170,4 +179,4 @@
 			<window name="cleanMenuBackground" />
 		</set>
 
-</ProjectZ2>
+</ProjectZ2XUI>
