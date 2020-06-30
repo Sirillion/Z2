@@ -1,8 +1,8 @@
 # Z2 - A19
 
 <p align="center">
-  <img src="https://imgur.com/NboISI5.jpg" width="700" title="Z2 - Radial - A18">
-  <img src="https://imgur.com/pUeRRT3.jpg" width="700" title="Z2 - Vehicle - A18">
+  <img src="https://imgur.com/NboISI5.jpg" width="700" title="Z2 - Radial - A19">
+  <img src="https://imgur.com/pUeRRT3.jpg" width="700" title="Z2 - Vehicle - A19">
 </p>
 
 **Description:**
