@@ -1,4 +1,4 @@
-# Z2 - A18
+# Z2 - A19
 
 <p align="center">
   <img src="https://imgur.com/NboISI5.jpg" width="700" title="Z2 - Radial - A18">
@@ -13,7 +13,7 @@ Worktime: 3-4h (initial sketchup) Worktime: 6-7h (fine tuning, touchups, changes
 
 New feature: This is coded as a HUD killer. This means that it can be dropped into an overhaul mod and will likely kill the overhauls HUD and replace it with Z2. Adaptation might be needed depending on overhaul features.
 
-Z2 is currently not scale friendly, and attempts to lock the scale at vanilla values. (will be in the next version)
+Z2 is somewhat scale friendly. Due to the art lines extreme scaling can cause issues.
 
  
 
