@@ -1,4 +1,4 @@
-<ProjectZ2XUI>
+<ProjectZ2_XUI>
 
 <!--	// Z2 // Compass -->
 
@@ -166,4 +166,4 @@
 			<window name="cleanMenuBackground" />
 		</set>
 
-</ProjectZ2XUI>
+</ProjectZ2_XUI>
