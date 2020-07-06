@@ -273,7 +273,7 @@
 							<sprite name="border" depth="3" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" pivot="center" fillcenter="false" />
 							<sprite name="background" depth="4" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" pivot="center" fillcenter="false" />
 
-							<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerHungerBar]" type="filled" fill="{statmodifiedmax}" filldirection="vertical" pivot="center" />
+							<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerHungerBar]" type="filled" fill="0" filldirection="vertical" pivot="center" />
 
 							<sprite name="Icon" depth="7" size="20,20" sprite="ui_game_symbol_fork" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" rotation="45" />
 							<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{playerfood}" color="[hudLabelSecondary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" controller="PlayerStatsWindow" />
@@ -560,7 +560,7 @@
 					<sprite name="targetBarRightDiamondA2" depth="5" pos="165,0" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 
 					<sprite name="targetBackground" depth="2" pos="0,0" size="300,24" sprite="menu_empty3px" color="[statPartyHealthBG]" type="sliced" pivot="center" />
-					<filledsprite name="BarContent" depth="3" pos="-1,0" size="294,20" sprite="menu_empty3px" color="[statTargetHealthBar]" type="filled" fill="{fill}" globalopacity="false" pivot="center" />
+					<filledsprite name="BarContent" depth="3" pos="0,0" size="296,20" sprite="menu_empty3px" color="[statTargetHealthBar]" type="filled" fill="{fill}" globalopacity="false" pivot="center" />
 					<label name="TextContent" depth="4" pos="10,0" size="300,20" text="{name}" color="[hudLabelPrimary]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" justify="left" pivot="center" />
 					<label name="TextContent" depth="4" pos="-10,0" size="300,20" text="{currentwithmax}" color="[hudLabelPrimary]" font_size="22" crispness="Never" effect="outline" effect_distance="1,1" justify="right" pivot="center" />
 
