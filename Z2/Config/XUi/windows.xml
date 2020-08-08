@@ -153,6 +153,15 @@
 
 				<sprite name="statXPLevelBAR" depth="5" pos="145,50" size="43,43" sprite="menu_empty3px" color="{xpcolor}" standard_xp_color="[experienceBarMain]" updating_xp_color="[experienceBarGain]" deficit_xp_color="[experienceBarLoss]" xp_fill_speed="2.5" type="filled" fill="{xp}" rotation="45" filldirection="radial360" pivot="center" controller="ToolbeltWindow" />
 
+				<sprite name="statTempBorder" depth="3" pos="175,20" size="26,26" sprite="menu_empty3px" color="[hudElementTempBRDR]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+				<sprite name="statTempBackground" depth="4" pos="175,20" size="24,24" sprite="menu_empty3px" color="[hudDiamondTempFG]" type="sliced" rotation="45" pivot="center" fillcenter="false" />
+				<sprite name="statTempForeground" depth="2" pos="175,20" size="24,24" sprite="menu_empty3px" color="[hudElementTempBG]" type="sliced" rotation="45" pivot="center" />
+
+				<sprite name="statTempIcon" depth="5" pos="175,20" size="18,18" sprite="ui_game_symbol_temperature" color="[hudTempIcon]" pivot="center" />
+
+				<sprite name="statTempBackground" depth="2" pos="215,20" size="85,26" sprite="menu_empty3px" color="[hudElementTempBG]" type="sliced" pivot="center" />
+				<label name="activeItemCount" depth="8" pos="210,20" size="80,26" text="{playercoretemp}" color="[hudLabelTemp]" font_size="18" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="right" pivot="center" controller="PlayerStatsWindow" />
+
 				<sprite name="statXPToHealthA" depth="1" pos="180,50" size="97,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
 
 				<sprite name="statHealthLeftA" depth="3" pos="273,86" size="15,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" />
@@ -246,6 +255,17 @@
 				<grid name="inventory" depth="10" pos="45,-38" rows="1" cols="8" cell_width="90" cell_height="75" controller="Toolbelt" repeat_content="true" pivot="center">
 					<Z2_item_stack name="0" />
 				</grid>
+
+				<grid name="inventorySlotNumbers" depth="11" pos="88,-1" rows="1" cols="8" cell_width="90" cell_height="75" repeat_content="false" pivot="center">
+					<label name="slotNumber1" depth="20" pos="0,0" size="20,20" text="1" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber2" depth="20" pos="0,0" size="20,20" text="2" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber3" depth="20" pos="0,0" size="20,20" text="3" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber4" depth="20" pos="0,0" size="20,20" text="4" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber5" depth="20" pos="0,0" size="20,20" text="5" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber6" depth="20" pos="0,0" size="20,20" text="6" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber7" depth="20" pos="0,0" size="20,20" text="7" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+					<label name="slotNumber8" depth="20" pos="0,0" size="20,20" text="8" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+				</grid>
 			</window>
 		</append>
 
@@ -283,7 +303,7 @@
 							<sprite name="border" depth="3" size="62,62" sprite="menu_empty3px" color="[hudElementBRDR]" type="sliced" pivot="center" fillcenter="false" />
 							<sprite name="background" depth="4" size="60,60" sprite="menu_empty3px" color="[hudDiamondFG]" type="sliced" pivot="center" fillcenter="false" />
 
-							<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerThirstBar]" type="filled" fill="2" filldirection="vertical" pivot="center" />
+							<sprite name="BarContent" depth="6" size="53,53" sprite="menu_empty3px" color="[playerThirstBar]" type="filled" fill="0" filldirection="vertical" pivot="center" />
 
 							<sprite name="Icon" depth="7" size="20,20" sprite="ui_game_symbol_water" color="[hudIconPrimary]" foregroundlayer="true" pivot="center" />
 							<label name="TextContent" depth="7" pos="0,-38" size="62,20" text="{playerwater}" color="[hudLabelSecondary]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" pivot="center" controller="PlayerStatsWindow" />
@@ -305,6 +325,9 @@
 					<sprite name="waterToLootE" depth="3" pos="170,-83" size="9,1" sprite="menu_empty3px" color="[mainLineColor]" pivot="left" rotation="45" />
 
 					<sprite name="lootToQuestTracker" depth="2" pos="177,-77" size="1,750" sprite="menu_empty3px" color="[mainLineColor]" pivot="bottom" />
+
+					<sprite name="waterToLootEndDiamondA1" depth="3" pos="177,680" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
+					<sprite name="waterToLootEndDiamondA2" depth="4" pos="177,680" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />
 
 					<sprite name="lootItemRightDiamondA1" depth="3" pos="177,30" size="11,11" sprite="menu_empty3px" color="[hudDiamondVanityA1]" rotation="45" pivot="center" />
 					<sprite name="lootItemRightDiamondA2" depth="4" pos="177,30" size="10,10" sprite="menu_empty3px" color="[hudDiamondVanityA2]" rotation="45" pivot="center" />

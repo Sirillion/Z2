@@ -25,6 +25,8 @@
 
 					<sprite name="cancel" depth="9" size="70,70" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" foregroundlayer="true" pivot="center" visible="false" />
 					<sprite name="assembleIcon" depth="13" pos="36,-36" size="20,20" sprite="{stacklockicon}" visible="{isassemblelocked}" foregroundlayer="true" pivot="center" />
+					<sprite name="slotNumberBackground" depth="14" pos="36,36" size="20,20" sprite="menu_empty3px" color="[slotNumberBackground]" type="sliced" globalopacity="true" pivot="center" />
+					<sprite name="slotNumberForeground" depth="15" pos="36,36" size="19,19" sprite="menu_empty3px" color="[slotNumberForeground]" type="sliced" globalopacity="true" pivot="center" />
 				</rect>
 			</Z2_item_stack>
 		</append>

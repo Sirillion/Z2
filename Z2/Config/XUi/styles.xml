@@ -12,6 +12,10 @@
 			<style_entry name="hudDiamondVanityA1"					value="0,0,0,255" />
 			<style_entry name="hudDiamondVanityA2"					value="128,128,128,255" />
 
+			<style_entry name="slotNumberLabelMain"					value="255,255,255,255" />
+			<style_entry name="slotNumberBackground"				value="0,0,0,255" />
+			<style_entry name="slotNumberForeground"				value="128,128,128,255" />
+
 			<style_entry name="hudDiamondFG2"						value="0,255,255,255" />
 
 			<style_entry name="hudDiamondNegative"					value="255,0,0,255" />
@@ -49,6 +53,12 @@
 
 			<style_entry name="statBarVehicleHealth"				value="175,30,25,200" />
 			<style_entry name="statBarVehicleFuel"					value="154,205,50,200" />
+
+			<style_entry name="hudElementTempBG"					value="96,96,96,128" />
+			<style_entry name="hudElementTempBRDR"					value="0,0,0,255" />
+			<style_entry name="hudDiamondTempFG"					value="128,128,128,255" />
+			<style_entry name="hudTempIcon"							value="255,255,255,255" />
+			<style_entry name="hudLabelTemp"						value="255,255,255,255" />
 		</append>
 
 
